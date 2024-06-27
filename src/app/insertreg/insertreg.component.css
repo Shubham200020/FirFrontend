@@ -1,0 +1,74 @@
+.fmcont{
+    width: 100%;
+    position: relative;
+    color: rgb(39, 38, 36);
+    font-size: larger;
+}
+.fms{
+    width: 40%;
+    padding: 20px;
+  
+    position: absolute;
+    left: 30%;
+    box-shadow: 10px 10px 8px 10px  rgb(127, 132, 127);
+   
+    border: 2px solid black;
+}
+
+.labe{
+   width: 100%;
+   
+}
+.inpt{
+    width: 100%;    
+    margin: 0%;
+    padding: 0;
+}
+.inpt input[type=text]{
+    background-color: aliceblue;
+    width: 90%;
+    height: 22px;
+}
+.inpt input[type=email]{
+    background-color: aliceblue;
+    margin: 0%;
+     width: 90%;
+     height: 22px;
+ }
+.inpt input[type=password]{
+    background-color: aliceblue;
+    width: 90%;
+    height: 22px;
+ }
+.inpt input[type=password]:after{
+    background-color: aliceblue;
+    box-shadow: 10px 10px 8px 10px  blue;
+    
+}
+span{
+    margin: 0%;
+    padding: 0%;
+    color: red;
+    font-size: small;
+    font-style: italic;
+}
+p{
+    margin: 0%;
+    padding: 0%; 
+}
+.subm{
+    margin-top: 2px;
+    text-align: center;
+}
+.subm input{
+    height: 30px;
+    width: 90px;
+    font-size: small;
+    color: aliceblue;
+    background-color: brown;
+    box-shadow: 5px 5px  rgb(16, 16, 21);
+}
+.subm input:hover{
+    background-color: rgb(154, 68, 68);
+    box-shadow: 10px 10px  rgb(16, 16, 21);
+}

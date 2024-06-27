@@ -1,0 +1,35 @@
+
+<div class="tabbac">
+    <button (click)="exportCsv()"><p>click Export in Csv file</p></button>
+<table class="table" >
+    <thead class="thead-dark">
+    <tr>
+        <th>Fir Id</th>
+        <th>Fir DateTime</th>
+        <th>Enquiry Officer</th>
+        <th>Enquiry Officer Role</th>
+        <th>Informer Name</th>
+        <th>Informer Date Of Birth</th>
+        <th>Informer Mobile Number</th>
+        <th>Type of Information</th>
+        <th>Suspect Name</th>
+        <th>Edit</th>
+        <th>Delete</th>
+
+    </tr>
+</thead>
+    <tr *ngFor="let i of data">
+        <td>{{i.fir_Number}}</td>
+        <td>{{i.currentDateTime|date:'medium'}}</td>
+        <td>{{i.enquiry.name}}</td>
+        <td>{{i.enquiry.role}}</td>
+        <td>{{i.complainant.coname}}</td>
+        <td>{{i.complainant.dob|date}}</td>
+        <td>{{i.complainant.mobileNumber}}</td>
+        <td>{{i.complainant.information}}</td>
+        <td>{{i.suspect.name}}</td>
+        <td><button (click)="editData(i.fir_Number)">Edit</button></td>
+        <td><button (click)="deleteData(i.fir_Number)">Delete</button></td>
+    </tr>
+</table>
+</div>

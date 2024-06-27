@@ -1,0 +1,35 @@
+.formm{
+    background-image: url('/assets/form/fmimg.jpg');
+    background-color: rgb(39, 38, 38);
+    color: rgb(218, 220, 223);
+    font-size: larger;
+}
+h1{
+ 
+    text-align: center;
+    font-size: 50px;
+    color: rgb(242, 236, 245);
+    text-shadow: 4px 4px rgb(73, 14, 14);
+
+}
+textarea{
+    border-radius: 10px;
+}
+form{
+    margin-top: 2px;
+    box-shadow: 5px 5px 10px 10px black;
+    background-color: rgb(56, 54, 54);
+    opacity: 0.8;
+    width: 60%;
+    margin-left: 20%;
+    border-radius: 8px;
+}
+input[type="submit"]{
+    width: 200px;
+}
+.txt{
+    text-align: center;
+}
+p{
+    color: red;
+}

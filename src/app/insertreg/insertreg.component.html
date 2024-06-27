@@ -1,0 +1,124 @@
+<div class="fmcont">
+    <div class="fms">
+        <h1>Register</h1><br>
+ 
+        <form [formGroup]="data" (ngSubmit)="subm(data)">
+            <div class="labe">
+                <label>First Name*</label>
+            </div>
+            <div class="inpt">
+                <input type="text" placeholder="Enter First Name" formControlName="firstName">
+                <p *ngIf="indicator">
+                    <span *ngIf="getfirstname.errors?.required">Required*</span>
+                </p>
+                <p>
+                    <span><span *ngIf="getfirstname.errors?.pattern">Don't Enter number In FirstName*</span></span>
+                </p>
+            </div>
+          
+            
+            <div class="labe">
+                <label>Middle Name*</label>
+            </div>
+            <div class="inpt">
+            <input type="text" placeholder="Enter Middle Name" formControlName="middleName">
+            <p *ngIf="indicator">
+                <span *ngIf="getmiddleName.errors?.required">Required*</span>
+            </p>
+            <p>
+                <span><span *ngIf="getmiddleName.errors?.pattern">Don't Enter number In FirstName*</span></span>
+            </p>
+            </div>
+
+
+            <div class="labe">
+                <label>Last Name*</label>
+            </div>
+            <div class="inpt">
+                <input type="text" placeholder="Enter Last Name" formControlName="lastName">
+              <p *ngIf="indicator">
+                <span *ngIf="getlastName.errors?.required">Required*</span>
+            </p>
+            <p>
+                <span><span *ngIf="getlastName.errors?.pattern">Don't Enter number In FirstName*</span></span>
+            </p>
+            </div>
+
+
+            <div class="labe">
+            <label>Mobile Number*</label>
+            </div>
+            <div class="inpt">
+                <input type="text" placeholder="Enter Mobile Number" formControlName="mobileNumber">
+                <p>
+                    <span *ngIf="getmobileNumber.errors?.pattern">Enter only Number*</span>
+                </p>
+                <p> <span *ngIf="getmobileNumber.errors?.maxlength">Enter Valid Number Maximum Length*</span></p>
+                <p *ngIf="indicator">
+                    <span *ngIf="getmobileNumber.errors?.required">Required*</span>
+                </p>
+                <p *ngIf="indicator">
+                    <span *ngIf="getmobileNumber.errors?.minlength">Enter valid Number Minimum Length*</span>
+                </p>
+            </div>
+            
+            <div class="labe">
+            <label>Upload Photo</label>
+            </div>
+            <div class="inpt">
+            <input type="file" (change)="onImageSelected($event)" accept="image/png, image/gif, image/jpeg"  >
+            <p *ngIf="indicator">
+                <span *ngIf="getphoto.errors?.required">Required*</span>
+            </p>
+            <p *ngIf="indicator">
+                <span *ngIf="getphoto.errors?.maxLength">Minimum Length*</span>
+            </p>
+            </div>
+            
+            <div class="labe">
+            <label>Email*</label>
+            </div>
+            
+            <div class="inpt">
+            <input type="email" placeholder="Enter Email" formControlName="email">
+            <p>
+                <span *ngIf="getemail.errors?.email">Enter Valid Email*</span>
+            </p>
+            <p *ngIf="indicator">
+                <span *ngIf="getemail.errors?.required">Required*</span>
+            </p>
+            </div>
+            <div class="labe">
+                <label>Password*</label>
+            </div>
+            
+            <div class="inpt">
+                <input type="text" placeholder="Enter password" formControlName="password">
+                <p *ngIf="indicator">
+                    <span *ngIf="getpassword.errors?.required">Required*</span>
+                </p>
+            </div>
+
+            <div class="labe">
+                <label>Conform Password*</label>
+            </div>
+            
+            <div class="inpt">
+                <input type="password" placeholder="Conform Password" formControlName="conformpass">
+                
+                <p *ngIf="indicator">
+                    <span *ngIf="conformpass.errors?.required">Required*</span>
+                </p>
+                <p>  <span *ngIf="conformpass.errors?.errorpass">Conform Pass not match*</span></p>
+            </div>
+            
+            <div class="subm">
+                <input type="submit" value="Registraision" >
+            </div>
+        </form>
+    </div>
+    <!-- <a [routerLink]="['/login']"><button class="btn btn-success" > Submit </button></a> -->
+</div><br>
+
+
+

@@ -1,0 +1,153 @@
+
+<div class="formm">
+    <h1>FIR Registration</h1>
+<form [formGroup]="dta" (ngSubmit)="submitt(data)" (load)="dataInEdt()">
+    <div>
+        
+        <div class="form-group">
+            <label class="form-label">Enquiry Officer Name</label>
+        </div>
+        <div>
+            <input class="form-control" type="text" formControlName="name" placeholder="Enquiry Officer Name"><br>
+            <p *ngIf="indicator&&getName.errors?.required">Required*</p>
+            <p *ngIf="getName.errors?.pattern">Dont Enter number In Name</p>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Enquiry Officer Role</label>
+          
+            <select formControlName="role" class="form-select">
+                <option>Constable</option>
+                <option>HeadConstable</option>
+                <option>ASI</option>
+                <option>PSI</option>
+                <option>API</option>
+                <option>API</option>
+            </select>
+        </div>
+        <p *ngIf="indicator&&getRole.errors?.required">Required*</p>
+    </div>
+    <div class="mb-3">
+        <label class="form-label" >Enquiry  Dstrict</label>
+    </div>
+    <div>    
+        <select formControlName="district" class="form-select">
+            <option *ngFor="let i of dis" [ngValue]="i">{{i.name}}</option>
+        </select>
+        <p *ngIf="indicator&&getDistricterr.errors?.required">Required*</p>
+    </div>
+
+
+
+    <div class="form-group">
+    <div class="mb-3">
+        <label  class="form-label" >Informant Full Name</label>
+    </div>
+    <div>
+        <input type="text" formControlName="coname" placeholder="Informant Full Name" class="form-control"><br>
+        <p *ngIf="indicator&&getConame.errors?.required">Required*</p>
+        <p *ngIf="getConame.errors?.pattern">Dont Enter number In Name</p>
+
+    </div>
+
+    <div>
+        <label class="form-label">Informant Date Of Birth</label>
+    </div>
+    <div>
+        <input type="date" formControlName="dob" class="form-control"><br>
+        <p *ngIf="indicator&&getdob.errors?.required">Required*</p>
+    </div>
+
+    
+    <div>
+        <label class="form-label">Informant Aadhar Number</label>
+    </div>
+    <div>
+        <input type="text" formControlName="aadharNumber" placeholder="Informant Aadhar Number" class="form-control"><br>
+        <p *ngIf="indicator&&getAadharNumber.errors?.required">Required*</p>
+        <p *ngIf="getAadharNumber.errors?.pattern">Enter Only Number</p>
+        <p *ngIf="indicator&&getAadharNumber.errors?.minlength">Enter Valid Aadhar Number</p>
+        <p *ngIf="getAadharNumber.errors?.maxlength">Enter Valid Aadhar Number</p>
+    </div>
+
+
+    <div>
+        <label class="form-label">Informant's Information</label>
+    </div>
+    <div>
+        <select formControlName="information" class="form-select">
+            <option>VictimInformed</option>
+            <option>PublicInformed</option>
+            <option>CriminalInformed</option>
+        </select>
+        <p *ngIf="indicator&&getInformation.errors?.required">Required*</p>
+     </div>
+    <div>
+        <label>Informant Occupation</label>
+    </div>
+    <div>
+        <input type="text" formControlName="occupation" placeholder="Informant Occupation" class="form-control"><br>
+        <p *ngIf="indicator&&grtOccupation.errors?.required">Required*</p>
+    </div>
+    <div>
+        <label class="form-label">Informant Mobile Number</label>
+    </div>
+    <div>
+        <input type="text" formControlName="mobileNumber" placeholder="Informant Mobile Number" class="form-control"><br>
+        <p *ngIf="indicator&&getMobileNumber.errors?.required">Required*</p>
+        <p *ngIf="getMobileNumber.errors?.pattern">Enter Only Number</p>
+        <p *ngIf="indicator&&getMobileNumber.errors?.minlength">Enter Valid  Number Atist length 10</p>
+        <p *ngIf="getMobileNumber.errors?.maxlength">Enter Valid Number Atist length 10</p>
+    </div>
+    <div>
+        <label class="form-label">Suspect Name</label>
+    </div>
+    <div>
+      <input type="text" placeholder="Enter Sucpect Name" formControlName="susname" class="form-control">
+      <p *ngIf="indicator&&getSusname.errors?.required">Required*</p>
+
+    </div>
+    <div>
+        <label class="form-label">Informant Nationality</label>
+    </div>
+    <div>
+        <input type="text" formControlName="nationality" placeholder="Informant Nationality" class="form-control"><br>
+        <p *ngIf="indicator&&getNationality.errors?.required">Required*</p>
+
+    </div>
+    <div>
+        <label class="form-label">Informant Address</label>
+    </div>
+    <div>
+       <textarea rows="2" cols="40" formControlName="address" placeholder="Informant Address"></textarea>
+       <p *ngIf="indicator&&getAddress.errors?.required">Required*</p>
+    </div>
+    <div>
+        <label class="form-label">Place Of Occurrence</label>
+       
+    </div>
+    <div>
+       <textarea rows="2" cols="40" formControlName="placeOccurrence" placeholder="Place Of Occurrence"></textarea>
+       <p *ngIf="indicator&&getPlaceOccurrence.errors?.required">Required*</p>
+    </div>
+
+    </div>
+
+
+    <div>
+        <div>
+            <label class="form-label">Suspact Address</label>
+        </div>
+        <div>
+           <textarea rows="2" cols="40" formControlName="susaddress" placeholder="Suspact Address"></textarea>
+           <p *ngIf="indicator&&getSusaddress.errors?.required">Required*</p>
+        </div>
+        
+    </div>
+    <div class="mb-3 txt">
+        <input type="submit" value="I/U FIR" class="btn btn-primary">
+    </div>
+</form>
+</div>
+
+
